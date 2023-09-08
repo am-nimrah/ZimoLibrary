@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: null,
-        body: SingleChildScrollView( // Wrap the content with SingleChildScrollView
+        body: SingleChildScrollView(
           child: Container(
             color: Colors.white,
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -26,14 +26,14 @@ class MyApp extends StatelessWidget {
                     Align(
                       alignment: Alignment.topLeft,
                       child: Padding(
-                        padding: EdgeInsets.only(left: 8.0),
+                        padding: const EdgeInsets.only(left: 8.0),
                         child: ColorFiltered(
-                          colorFilter: ColorFilter.mode(
-                            Colors.transparent, // Original color
+                          colorFilter: const ColorFilter.mode(
+                            Colors.transparent,
                             BlendMode.srcIn,
                           ),
                           child: SvgPicture.asset(
-                            'assets/ZIMO MEET B.svg', 
+                            'assets/ZIMO MEET B.svg',
                             width: 40.0,
                             height: 40.0,
                           ),
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
                     ),
                     Row(
                       children: <Widget>[
-                        Column(
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
@@ -68,8 +68,8 @@ class MyApp extends StatelessWidget {
                         Align(
                           alignment: Alignment.topRight,
                           child: ColorFiltered(
-                            colorFilter: ColorFilter.mode(
-                              Colors.transparent, // Original color
+                            colorFilter: const ColorFilter.mode(
+                              Colors.transparent,
                               BlendMode.srcIn,
                             ),
                             child: SvgPicture.asset(
@@ -83,115 +83,128 @@ class MyApp extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 2.0),
-                // New column widget containing the desired content
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      'DISCOVER',
-                      style: TextStyle(
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        fontSize: 20.0,
-                        color: Colors.black,
+                Padding(
+                  padding: EdgeInsets.only(top: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            const Text(
+                              'DISCOVER',
+                              style: TextStyle(
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 20.0,
+                                color: Colors.black,
+                              ),
+                            ),
+                            const Text(
+                              'ONE PLATFORM',
+                              style: TextStyle(
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 26.0,
+                                color: Colors.black,
+                              ),
+                            ),
+                            const Text(
+                              'TOGETHER, WE CREATE AND BUILD A BETTER WORLD.',
+                              style: TextStyle(
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 12.0,
+                                color: Colors.grey,
+                              ),
+                            ),
+                            Image.asset(
+                              'assets/ZM TXT BG Icon.png',
+                              width: 150.0,
+                              height: 200.0,
+                            ),
+                            const Text(
+                              'PREMIUM VIDEO MEETINGS \n END TO END ENCRYPTION \n LOBBY MODE \n PASSWORD PROTECTED MEETINGS \n CUSTOMIZED LINKS \n FREE FOR EVERYONE \n RECORDINGS',
+                              style: TextStyle(
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 12.0,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                    Text(
-                      'ONE PLATFORM',
-                      style: TextStyle(
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        fontSize: 26.0,
-                        color: Colors.black,
-                      ),
-                    ),
-                    Text(
-                      'TOGETHER, WE CREATE AND BUILD A BETTER WORLD.',
-                      style: TextStyle(
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        fontSize: 12.0,
-                        color: Colors.grey,
-                      ),
-                    ),
-                    Image.asset(
-                      'assets/ZM TXT BG Icon.png',
-                      width: 150.0, // Increase the size of the image
-                      height: 200.0,
-                    ),
-                    Text(
-                      'PREMIUM VIDEO MEETINGS \n END TO END ENCRYPTION \n LOBBY MODE \n PASSWORD PROTECTED MEETINGS \n CUSTOMIZED LINKS \n FREE FOR EVERYONE \n RECORDINGS',
-                      style: TextStyle(
-                        fontFamily: 'Lato',
-                        fontWeight: FontWeight.w400,
-                        fontSize: 12.0,
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-                SizedBox(height: 1.0),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Column(
+                const SizedBox(height: 1.0),
+                Stack(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
-                        SvgPicture.asset(
-                          'assets/ZM New Meeting Icon TRANS.svg',
-                          width: 80.0, // Increase the size of the SVG image
-                          height: 80.0,
+                        Column(
+                          children: <Widget>[
+                            SvgPicture.asset(
+                              'assets/ZM New Meeting Icon TRANS.svg',
+                              width: 80.0,
+                              height: 80.0,
+                            ),
+                            const Text(
+                              'NEW MEETING',
+                              style: TextStyle(
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 12.0,
+                                color: Colors.black,
+                              ),
+                            ),
+                            Image.asset(
+                              'assets/ZM Enter Code Link Icon Mobile TRANS.png',
+                              width: 150.0,
+                              height: 150.0,
+                            ),
+                            const Text(
+                              'ENTER A CODE OR LINK',
+                              style: TextStyle(
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 12.0,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
                         ),
-                        Text(
-                          'NEW MEETING',
-                          style: TextStyle(
-                            fontFamily: 'Lato',
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12.0,
-                            color: Colors.black,
-                          ),
-                        ),
-                        Image.asset(
-                          'assets/ZM Enter Code Link Icon Mobile TRANS.png',
-                          width: 150.0, // Increase the size of the image
-                          height: 150.0,
-                        ),
-                        Text(
-                          'ENTER A CODE OR LINK',
-                          style: TextStyle(
-                            fontFamily: 'Lato',
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12.0,
-                            color: Colors.black,
-                          ),
+                        Column(
+                          children: <Widget>[
+                            Image.asset(
+                              'assets/1 (2).png',
+                              width: 150.0,
+                              height: 150.0,
+                            ),
+                            const Text(
+                              'ENJOY LONGER GROUP VIDEO CALLS \n NOISE SUPPRESSION AND \n MORE',
+                              style: TextStyle(
+                                fontFamily: 'Lato',
+                                fontWeight: FontWeight.w400,
+                                fontSize: 12.0,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                    Column(
-                      children: <Widget>[
-                        Image.asset(
-                          'assets/1 (2).png',
-                          width: 150.0, // Increase the size of the image
-                          height: 150.0,
-                        ),
-                        Text(
-                          'ENJOY LONGER GROUP VIDEO CALLS \n NOISE SUPPRESSION AND \n MORE',
-                          style: TextStyle(
-                            fontFamily: 'Lato',
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12.0,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
                   ],
                 ),
-                SizedBox(height: 1.0),
+                const SizedBox(height: 1.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text(
+                    const Text(
                       'ZIMO GROUP 2023',
                       style: TextStyle(
                         fontFamily: 'Lato',
