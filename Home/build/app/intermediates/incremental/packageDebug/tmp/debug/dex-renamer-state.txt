@@ -1,0 +1,4 @@
+#Sun Sep 24 21:35:14 PKT 2023
+base.0=C\:\\Users\\marwa waqar\\StudioProjects\\Home\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
